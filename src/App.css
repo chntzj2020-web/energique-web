@@ -2,11 +2,17 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
+  background: #f5f1eb;
+}
+
+.main-content {
+  width: 100%;
+  min-height: 100vh;
 }
 
 .home-page {
   position: relative;
-  width: calc(100% - 380px);
+  width: 100%;
   min-height: 100vh;
   overflow: hidden;
   background:
@@ -110,8 +116,173 @@
   background: rgba(255, 255, 255, 0.08);
 }
 
+
+/* FOOTER */
+
+.footer-info-section {
+  background: #bec8c6;
+  color: #1f2d33;
+  padding: 90px 72px 36px;
+}
+
+.footer-info-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 120px;
+  align-items: start;
+}
+
+.brand-column {
+  max-width: 480px;
+}
+
+.footer-logo {
+  margin: 0 0 28px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #2e5160;
+}
+
+.footer-description {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.9;
+  color: #2d3c42;
+}
+
+.footer-contact-block {
+  margin-top: 50px;
+}
+
+.footer-heading {
+  margin: 0 0 24px 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #16242a;
+}
+
+.footer-links,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 16px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #2d3c42;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #2d3c42;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #2e5160;
+}
+
+.footer-bottom {
+  margin-top: 70px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(31, 45, 51, 0.12);
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 16px;
+  color: #4f6168;
+}
+
+
+/* TABLET */
+
 @media (max-width: 1100px) {
-  .home-page {
+
+  .main-content {
     width: 100%;
   }
+
+  .hero-content {
+    padding: 110px 40px 80px;
+  }
+
+  .hero-title {
+    font-size: 72px;
+  }
+
+  .hero-subtitle {
+    font-size: 28px;
+  }
+
+  .footer-info-section {
+    padding: 70px 40px 32px;
+  }
+
+  .footer-info-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .hero-content {
+    padding: 90px 24px 70px;
+  }
+
+  .hero-title {
+    font-size: 52px;
+  }
+
+  .hero-subtitle {
+    font-size: 24px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .footer-info-section {
+    padding: 56px 24px 28px;
+  }
+
+  .footer-info-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-logo {
+    font-size: 34px;
+  }
+
+  .footer-description,
+  .footer-links li,
+  .footer-contact li {
+    font-size: 16px;
+  }
+
 }

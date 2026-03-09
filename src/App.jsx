@@ -1,30 +1,19 @@
 import "./App.css";
-import Sidebar from "./components/Sidebar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import News from "./pages/News";
+import NewsDetail from "./pages/NewsDetail";
 
 function App() {
   return (
-    <div className="page-layout">
-      <div className="home-page">
-        <div className="hero-overlay"></div>
-
-        <div className="hero-content">
-          <p className="hero-kicker">PDCLC Film</p>
-          <h1 className="hero-title">ENERGIQUE</h1>
-          <h2 className="hero-subtitle">Switchable Privacy Solutions</h2>
-          <p className="hero-description">
-            Advanced smart film and glass technologies designed for modern
-            automotive, architectural, and commercial environments.
-          </p>
-
-          <div className="hero-buttons">
-            <button className="primary-btn">Explore Products</button>
-            <button className="secondary-btn">Learn More</button>
-          </div>
-        </div>
-      </div>
-
-      <Sidebar />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/news/:id" element={<NewsDetail />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

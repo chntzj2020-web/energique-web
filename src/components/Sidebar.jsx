@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Sidebar.css";
 
 export default function Sidebar() {
@@ -13,8 +14,17 @@ export default function Sidebar() {
     setIsSidebarOpen((prev) => !prev);
   };
 
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+    setOpenMenu(null);
+  };
+
   return (
     <>
+      {isSidebarOpen && (
+        <div className="sidebar-backdrop" onClick={closeSidebar}></div>
+      )}
+
       <button
         className={`menu-toggle ${isSidebarOpen ? "active" : ""}`}
         onClick={toggleSidebar}
@@ -25,12 +35,20 @@ export default function Sidebar() {
         <span></span>
       </button>
 
-      <div className={`sidebar ${isSidebarOpen ? "open" : "closed"}`}>
-        <div className="menu-item">HOME</div>
+      <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
+        <Link to="/" className="menu-item" onClick={closeSidebar}>
+          <span>HOME</span>
+        </Link>
 
         <div className="menu-item" onClick={() => toggleMenu("applications")}>
           <span>APPLICATIONS</span>
-          <span className="arrow">▼</span>
+          <span
+            className={`arrow ${
+              openMenu === "applications" ? "arrow-open" : ""
+            }`}
+          >
+            ▼
+          </span>
         </div>
         {openMenu === "applications" && (
           <div className="submenu">
@@ -42,7 +60,11 @@ export default function Sidebar() {
 
         <div className="menu-item" onClick={() => toggleMenu("products")}>
           <span>PRODUCTS</span>
-          <span className="arrow">▼</span>
+          <span
+            className={`arrow ${openMenu === "products" ? "arrow-open" : ""}`}
+          >
+            ▼
+          </span>
         </div>
         {openMenu === "products" && (
           <div className="submenu">
@@ -51,9 +73,17 @@ export default function Sidebar() {
           </div>
         )}
 
-        <div className="menu-item">NEWS</div>
-        <div className="menu-item">ABOUT US</div>
-        <div className="menu-item">CONTACT US</div>
+        <Link to="/news" className="menu-item" onClick={closeSidebar}>
+          <span>NEWS</span>
+        </Link>
+
+        <div className="menu-item" onClick={closeSidebar}>
+          <span>ABOUT US</span>
+        </div>
+
+        <div className="menu-item" onClick={closeSidebar}>
+          <span>CONTACT US</span>
+        </div>
       </div>
     </>
   );
