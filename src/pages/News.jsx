@@ -5,7 +5,7 @@ import "./News.css";
 function News() {
   return (
     <div className="news-page">
-      <h1>News</h1>
+      <h1>Energiue's News</h1>
 
       <div className="news-grid">
         {news.map((item) => (

@@ -1,0 +1,147 @@
+.contact-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #eef2f4;
+}
+
+.contact-left {
+  flex: 1.2;
+  padding: 110px 90px 80px;
+  background: #f7f7f7;
+}
+
+.contact-right {
+  flex: 0.8;
+  padding: 110px 70px;
+  background: #e8edf1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 60px;
+
+  text-align: center;
+}
+
+.contact-intro {
+  max-width: 760px;
+  font-size: 24px;
+  line-height: 1.45;
+  font-weight: 600;
+  color: #3a3f45;
+  margin-bottom: 70px;
+}
+
+.contact-intro a {
+  color: #3d5e74;
+  text-decoration: underline;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 46px 50px;
+}
+
+.contact-card {
+  padding-right: 20px;
+  border-right: 1px solid rgba(49, 74, 90, 0.12);
+}
+
+.contact-card h3 {
+  margin: 0 0 18px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #375267;
+}
+
+.contact-card p {
+  margin: 12px 0;
+  font-size: 22px;
+  color: #4c6576;
+  line-height: 1.5;
+}
+
+.contact-right {
+  padding: 110px 70px;
+  background: #e8edf1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 70px;
+  text-align: center;
+}
+
+.contact-action-group h2 {
+  margin: 0 0 28px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #375267;
+}
+
+.contact-btn {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 24px;
+  padding: 18px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: white;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+.contact-btn.blue {
+  background: #3f99c5;
+}
+
+.contact-btn.red {
+  background: #ff1c1c;
+}
+
+@media (max-width: 1100px) {
+  .contact-page {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 80px 40px 60px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    border-right: none;
+    border-bottom: 1px solid rgba(49, 74, 90, 0.12);
+    padding-bottom: 20px;
+  }
+
+  .contact-intro {
+    font-size: 20px;
+  }
+
+  .contact-card h3 {
+    font-size: 24px;
+  }
+
+  .contact-card p {
+    font-size: 19px;
+  }
+
+  .contact-action-group h2 {
+    font-size: 24px;
+  }
+}

@@ -81,9 +81,9 @@ export default function Sidebar() {
           <span>ABOUT US</span>
         </div>
 
-        <div className="menu-item" onClick={closeSidebar}>
+        <Link to="/contact" className="menu-item" onClick={closeSidebar}>
           <span>CONTACT US</span>
-        </div>
+        </Link>
       </div>
     </>
   );
