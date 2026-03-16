@@ -1,5 +1,6 @@
 import "../App.css";
 import Sidebar from "../components/Sidebar";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -28,6 +29,7 @@ function Home() {
               >
                 Explore Products
               </button>
+
               <button
                 className="secondary-btn"
                 onClick={() =>
@@ -42,34 +44,9 @@ function Home() {
           </div>
         </div>
 
-        <section id="footer-info" className="footer-info-section">
-          <div className="footer-info-container">
-            <div className="footer-column">
-              <h3 className="footer-heading">Quick Links</h3>
-              <ul className="footer-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Applications</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </div>
-
-            <div className="footer-column">
-              <h3 className="footer-heading">Contact Information</h3>
-              <ul className="footer-contact">
-                <li>QLD, Australia</li>
-                <li>+61 400 000 000</li>
-                <li>xxx@energique.com</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="footer-bottom">
-            <p>© 2026 ENERGIQUE. All rights reserved.</p>
-          </div>
-        </section>
+        <div id="footer-info">
+          <Footer />
+        </div>
       </div>
 
       <Sidebar />
