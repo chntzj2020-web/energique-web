@@ -3,16 +3,17 @@ const mysql = require("mysql2");
 const cors = require("cors");
 
 const app = express();
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
 
 app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "root",
-  password: "163907abc",
-  database: "energique_db",
+  host: process.env.MYSQLHOST || process.env.DB_HOST,
+  user: process.env.MYSQLUSER || process.env.DB_USER,
+  password: process.env.MYSQLPASSWORD || process.env.DB_PASSWORD,
+  database: process.env.MYSQLDATABASE || process.env.DB_NAME,
+  port: process.env.MYSQLPORT || process.env.DB_PORT || 3306,
 });
 
 db.connect((err) => {
@@ -137,6 +138,6 @@ app.delete("/api/enquiries/:id", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
