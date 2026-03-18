@@ -8,6 +8,8 @@ import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Applications from "./pages/Application";
 import Sidebar from "./components/Sidebar";
+import Enquiry from "./pages/Enquiry";
+import AdminEnquiries from "./pages/AdminEnquiries";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/news/:slug" element={<NewsDetail />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/enquiry" element={<Enquiry />} />
+        <Route path="/admin/enquiries" element={<AdminEnquiries />} />
       </Routes>
     </BrowserRouter>
   );

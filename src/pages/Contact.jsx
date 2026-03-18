@@ -1,5 +1,6 @@
 import "./Contact.css";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 function Contact() {
   return (
@@ -35,16 +36,16 @@ function Contact() {
         <div className="contact-right">
           <div className="contact-action-group">
             <h2>COMMERCIAL ENQUIRIES</h2>
-            <a href="/" className="contact-btn blue">
+            <Link to="/enquiry?type=commercial" className="contact-btn blue">
               CLICK HERE TO SEND AN ENQUIRY
-            </a>
+            </Link>
           </div>
 
           <div className="contact-action-group">
             <h2>RESIDENTIAL ENQUIRIES</h2>
-            <a href="/" className="contact-btn blue">
+            <Link to="/enquiry?type=residential" className="contact-btn blue">
               CLICK HERE TO SEND AN ENQUIRY
-            </a>
+            </Link>
           </div>
         </div>
       </div>

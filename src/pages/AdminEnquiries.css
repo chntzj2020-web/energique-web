@@ -1,0 +1,125 @@
+.admin-enquiry-page {
+  min-height: 100vh;
+  background: #f5f1eb;
+  padding: 120px 24px 80px;
+}
+
+.admin-enquiry-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #fcfaf7;
+  border: 1px solid rgba(120, 98, 72, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(35, 29, 24, 0.08);
+  padding: 48px;
+}
+
+.admin-enquiry-header {
+  margin-bottom: 28px;
+}
+
+.admin-enquiry-kicker {
+  margin: 0 0 10px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9c7b52;
+}
+
+.admin-enquiry-header h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: #1f3438;
+  font-weight: 700;
+}
+
+.admin-enquiry-header p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #5d6765;
+}
+
+.admin-state {
+  margin: 24px 0 0;
+  font-size: 1rem;
+  color: #516160;
+}
+
+.admin-state.error {
+  color: #a63e3e;
+}
+
+.admin-table-wrapper {
+  margin-top: 28px;
+  overflow-x: auto;
+  border-radius: 20px;
+  border: 1px solid rgba(31, 52, 56, 0.1);
+  background: #fff;
+}
+
+.admin-enquiry-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+}
+
+.admin-enquiry-table thead {
+  background: #1f3438;
+}
+
+.admin-enquiry-table thead th {
+  padding: 18px 16px;
+  text-align: left;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.admin-enquiry-table tbody tr {
+  border-bottom: 1px solid rgba(31, 52, 56, 0.08);
+  transition: background 0.2s ease;
+}
+
+.admin-enquiry-table tbody tr:hover {
+  background: #f8f4ee;
+}
+
+.admin-enquiry-table tbody td {
+  padding: 18px 16px;
+  vertical-align: top;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #304346;
+}
+
+.message-cell {
+  min-width: 280px;
+  max-width: 420px;
+  white-space: normal;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  .admin-enquiry-container {
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-enquiry-page {
+    padding: 100px 16px 60px;
+  }
+
+  .admin-enquiry-container {
+    border-radius: 20px;
+    padding: 24px 16px;
+  }
+
+  .admin-enquiry-header h1 {
+    font-size: 2rem;
+  }
+}
