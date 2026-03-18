@@ -3,12 +3,7 @@ import { Link } from "react-router-dom";
 import "./Sidebar.css";
 
 export default function Sidebar() {
-  const [openMenu, setOpenMenu] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleMenu = (menu) => {
-    setOpenMenu(openMenu === menu ? null : menu);
-  };
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
@@ -16,7 +11,6 @@ export default function Sidebar() {
 
   const closeSidebar = () => {
     setIsSidebarOpen(false);
-    setOpenMenu(null);
   };
 
   return (
@@ -37,52 +31,27 @@ export default function Sidebar() {
 
       <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
         <Link to="/" className="menu-item" onClick={closeSidebar}>
-          <span>HOME</span>
+          HOME
         </Link>
 
-        <div className="menu-item" onClick={() => toggleMenu("applications")}>
-          <span>APPLICATIONS</span>
-          <span
-            className={`arrow ${
-              openMenu === "applications" ? "arrow-open" : ""
-            }`}
-          >
-            ▼
-          </span>
-        </div>
-        {openMenu === "applications" && (
-          <div className="submenu">
-            <div>Automotive</div>
-            <div>Architecture</div>
-            <div>Commercial</div>
-          </div>
-        )}
+        <Link to="/applications" className="menu-item" onClick={closeSidebar}>
+          APPLICATIONS
+        </Link>
 
-        <div className="menu-item" onClick={() => toggleMenu("products")}>
-          <span>PRODUCTS</span>
-          <span
-            className={`arrow ${openMenu === "products" ? "arrow-open" : ""}`}
-          >
-            ▼
-          </span>
-        </div>
-        {openMenu === "products" && (
-          <div className="submenu">
-            <div>Smart Film</div>
-            <div>Smart Glass</div>
-          </div>
-        )}
+        <Link to="/products" className="menu-item" onClick={closeSidebar}>
+          PRODUCTS
+        </Link>
 
         <Link to="/news" className="menu-item" onClick={closeSidebar}>
-          <span>NEWS</span>
+          NEWS
         </Link>
 
-        <div className="menu-item" onClick={closeSidebar}>
-          <span>ABOUT US</span>
-        </div>
+        <Link to="/about" className="menu-item" onClick={closeSidebar}>
+          ABOUT US
+        </Link>
 
         <Link to="/contact" className="menu-item" onClick={closeSidebar}>
-          <span>CONTACT US</span>
+          CONTACT US
         </Link>
       </div>
     </>

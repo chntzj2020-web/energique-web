@@ -15,9 +15,7 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background:
-    linear-gradient(rgba(20, 35, 42, 0.45), rgba(20, 35, 42, 0.55)),
-    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80");
+  background-image: url("/images/home/home_background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
