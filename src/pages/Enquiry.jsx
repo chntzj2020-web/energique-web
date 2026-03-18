@@ -3,6 +3,8 @@ import { useSearchParams } from "react-router-dom";
 import "./Enquiry.css";
 import Footer from "../components/Footer";
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
 export default function Enquiry() {
   const [searchParams] = useSearchParams();
 
@@ -98,7 +100,7 @@ export default function Enquiry() {
           };
 
     try {
-      const res = await fetch("http://localhost:5001/api/enquiries", {
+      const res = await fetch(`${API_BASE}/api/enquiries`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
