@@ -13,7 +13,9 @@ function News() {
     <>
       <div className="news-page">
         <h1 className="news-title">News</h1>
-
+        <p className="news-subtitle">
+          Discover the latest milestones and achievements of Energique.
+        </p>
         <div className="news-grid">
           {sortedNews.map((item) => (
             <Link

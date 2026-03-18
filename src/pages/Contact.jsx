@@ -2,6 +2,7 @@ import "./Contact.css";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
+
 function Contact() {
   return (
     <div className="contact-wrapper">

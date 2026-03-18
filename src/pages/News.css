@@ -10,6 +10,13 @@
   background: #a0b8c7;
 }
 
+.news-subtitle {
+  font-size: 18px;
+  color: #6b7280;
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+
 .news-page h1 {
   margin-bottom: 50px;
   font-size: 46px;
