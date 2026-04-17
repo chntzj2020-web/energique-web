@@ -14,12 +14,13 @@ function Home() {
           <div className="hero-overlay"></div>
 
           <div className="hero-content">
-            <p className="hero-kicker">PDCLC Film</p>
+            <p className="hero-kicker">Advanced Energy Materials</p>
             <h1 className="hero-title">ENERGIQUE</h1>
-            <h2 className="hero-subtitle">Switchable Privacy Solutions</h2>
+            <h2 className="hero-subtitle">Intelligent Film. Sustainable Energy.</h2>
             <p className="hero-description">
-              Advanced smart film technologies designed for modern automotive,
-              architectural, and commercial environments.
+              From smart dimming films to next-generation photovoltaic solutions,
+              Energique develops advanced material technologies for buildings,
+              mobility, and future energy systems.
             </p>
 
             <div className="hero-buttons">
@@ -27,11 +28,11 @@ function Home() {
                 className="primary-btn"
                 onClick={() =>
                   document
-                    .getElementById("quick-links")
+                    .getElementById("home-platform")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Explore More
+                Explore Technologies
               </button>
 
               <button
@@ -44,28 +45,32 @@ function Home() {
           </div>
         </div>
 
-        {/* Overview */}
-        <section className="home-section overview-section" id="home-overview">
+        {/* Platform Overview */}
+        <section
+          className="home-section overview-section"
+          id="home-platform"
+        >
           <div className="section-header">
             <p className="section-kicker">Who We Are</p>
             <h2 className="section-title">
-              Leading Innovation in Smart Dimming Film
+              Advanced Materials for Light, Energy, and Mobility
             </h2>
           </div>
 
           <div className="overview-grid">
             <div className="overview-text">
               <p>
-                Energique is dedicated to the development and production of
-                advanced smart dimming film solutions. With globally leading
-                PDCLC technology, we deliver intelligent privacy and light
-                control systems for diverse environments.
+                Energique is an advanced materials company focused on intelligent
+                surface technologies for modern architecture, transportation, and
+                energy applications. Our portfolio spans smart dimming film,
+                solar-integrated solutions, and next-generation material systems
+                designed for performance, efficiency, and design freedom.
               </p>
               <p>
-                Backed by strong international cooperation and deep collaboration
-                with HIUV, we are expanding across global markets including
-                North America, East Asia, and Australia, with headquarters in
-                Queensland.
+                With globally leading PDCLC capabilities, strategic industry
+                partnerships, and expanding operations across North America, East
+                Asia, and Australia, we are building a technology platform where
+                light control and sustainable energy converge.
               </p>
 
               <Link to="/about" className="text-link">
@@ -75,113 +80,115 @@ function Home() {
 
             <div className="overview-cards">
               <div className="info-card">
-                <h3>Global Reach</h3>
+                <h3>Material Innovation</h3>
                 <p>
-                  Operating with partnerships across multiple international
-                  markets.
+                  Advanced film and surface technologies engineered for dynamic
+                  light management and energy performance.
                 </p>
               </div>
 
               <div className="info-card">
-                <h3>Advanced Technology</h3>
+                <h3>Energy Integration</h3>
                 <p>
-                  Industry-leading PDCLC film solutions for privacy, comfort,
-                  and energy efficiency.
+                  Expanding beyond dimming solutions into photovoltaic and
+                  sustainable energy applications.
                 </p>
               </div>
 
               <div className="info-card">
-                <h3>Wide Applications</h3>
+                <h3>Global Deployment</h3>
                 <p>
-                  Suitable for automotive, architectural, commercial, and
-                  specialty use cases.
+                  Supporting partners and projects across automotive,
+                  architectural, and commercial sectors worldwide.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Applications */}
+        {/* Technology Pillars */}
         <section className="home-section applications-section">
           <div className="section-header center">
-            <p className="section-kicker">Applications</p>
+            <p className="section-kicker">Core Technologies</p>
             <h2 className="section-title">
-              Designed for Modern Spaces and Mobility
+              A Technology Platform, Not Just a Single Product
             </h2>
             <p className="section-description">
-              Our smart film technology enhances privacy, comfort, and design
-              flexibility across a wide range of industries.
+              Energique combines smart film innovation with emerging energy
+              technologies to support a broader future of intelligent surfaces.
             </p>
           </div>
 
           <div className="applications-grid">
             <div className="application-card">
-              <h3>Automotive</h3>
+              <h3>Smart Film</h3>
               <p>
-                Smart dimming solutions for vehicle windows, sunroofs, and
-                next-generation cabin experiences.
+                PDCLC-based dimming solutions for privacy, solar control, visual
+                comfort, and responsive interior environments.
               </p>
             </div>
 
             <div className="application-card">
-              <h3>Architecture</h3>
+              <h3>Photovoltaics</h3>
               <p>
-                Dynamic privacy and light control for offices, hotels,
-                residential spaces, and public buildings.
+                Next-generation energy solutions designed to support solar
+                integration, lightweight systems, and future-facing applications.
               </p>
             </div>
 
             <div className="application-card">
-              <h3>Commercial</h3>
+              <h3>Intelligent Surfaces</h3>
               <p>
-                Flexible solutions for meeting rooms, retail spaces, healthcare
-                environments, and more.
+                Advanced material systems that merge design, function, and energy
+                performance across modern built environments and mobility.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Highlights */}
+        {/* Application Areas */}
         <section className="home-section highlights-section">
           <div className="section-header center">
-            <p className="section-kicker">Why Energique</p>
-            <h2 className="section-title">Smart Technology, Practical Value</h2>
+            <p className="section-kicker">Applications</p>
+            <h2 className="section-title">
+              Designed for Buildings, Mobility, and Energy Systems
+            </h2>
           </div>
 
           <div className="highlights-grid">
             <div className="highlight-item">
               <span className="highlight-number">01</span>
-              <h3>Privacy on Demand</h3>
+              <h3>Architecture</h3>
               <p>
-                Instantly switch between transparent and private states to suit
-                different environments and needs.
+                Smart glazing and integrated material solutions for offices,
+                hotels, residential developments, and public buildings.
               </p>
             </div>
 
             <div className="highlight-item">
               <span className="highlight-number">02</span>
-              <h3>Energy Efficiency</h3>
+              <h3>Automotive</h3>
               <p>
-                Support improved thermal comfort and solar control for more
-                sustainable spaces.
+                Advanced light-control technologies for vehicle windows, sunroofs,
+                cabin comfort, and future mobility platforms.
               </p>
             </div>
 
             <div className="highlight-item">
               <span className="highlight-number">03</span>
-              <h3>Modern Aesthetics</h3>
+              <h3>Commercial Spaces</h3>
               <p>
-                Integrate seamlessly into contemporary design while adding
-                intelligent functionality.
+                Flexible systems for retail, healthcare, hospitality, and
+                workplace environments that require privacy and adaptability.
               </p>
             </div>
 
             <div className="highlight-item">
               <span className="highlight-number">04</span>
-              <h3>Scalable Solutions</h3>
+              <h3>Energy Projects</h3>
               <p>
-                From single installations to large commercial projects, our
-                products adapt to different project needs.
+                Emerging material applications that support photovoltaic
+                integration and sustainable energy innovation.
               </p>
             </div>
           </div>
