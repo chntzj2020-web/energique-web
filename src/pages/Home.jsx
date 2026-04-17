@@ -68,9 +68,8 @@ function Home() {
               </p>
               <p>
                 With globally leading PDCLC capabilities, strategic industry
-                partnerships, and expanding operations across North America, East
-                Asia, and Australia, we are building a technology platform where
-                light control and sustainable energy converge.
+                partnerships, and expanding operations, we are building a technology
+                platform where light control and sustainable energy converge.
               </p>
 
               <Link to="/about" className="text-link">
@@ -78,33 +77,42 @@ function Home() {
               </Link>
             </div>
 
-            <div className="overview-cards">
-              <div className="info-card">
-                <h3>Material Innovation</h3>
-                <p>
-                  Advanced film and surface technologies engineered for dynamic
-                  light management and energy performance.
-                </p>
+            <div className="overview-timeline">
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>Material Innovation</h3>
+                  <p>
+                    Advanced film and surface technologies engineered for dynamic
+                    light management and energy performance.
+                  </p>
+                </div>
               </div>
 
-              <div className="info-card">
-                <h3>Energy Integration</h3>
-                <p>
-                  Expanding beyond dimming solutions into photovoltaic and
-                  sustainable energy applications.
-                </p>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>Energy Integration</h3>
+                  <p>
+                    Expanding beyond dimming solutions into photovoltaic and
+                    sustainable energy applications.
+                  </p>
+                </div>
               </div>
 
-              <div className="info-card">
-                <h3>Global Deployment</h3>
-                <p>
-                  Supporting partners and projects across automotive,
-                  architectural, and commercial sectors worldwide.
-                </p>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>Global Deployment</h3>
+                  <p>
+                    Supporting partners and projects across automotive,
+                    architectural, and commercial sectors worldwide.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </section>
+          </section>
 
         {/* Technology Pillars */}
         <section className="home-section applications-section">
@@ -121,6 +129,7 @@ function Home() {
 
           <div className="applications-grid">
             <div className="application-card">
+              <img src="/images/home/home_tech1.png" alt="Smart Film" className="card-img" />
               <h3>Smart Film</h3>
               <p>
                 PDCLC-based dimming solutions for privacy, solar control, visual
@@ -129,6 +138,7 @@ function Home() {
             </div>
 
             <div className="application-card">
+              <img src="/images/home/home_tech2.png" alt="Photovoltaics" className="card-img" />
               <h3>Photovoltaics</h3>
               <p>
                 Next-generation energy solutions designed to support solar
@@ -137,6 +147,7 @@ function Home() {
             </div>
 
             <div className="application-card">
+              <img src="/images/home/home_tech3.png" alt="Intelligent Surfaces" className="card-img" />
               <h3>Intelligent Surfaces</h3>
               <p>
                 Advanced material systems that merge design, function, and energy
@@ -157,6 +168,7 @@ function Home() {
 
           <div className="highlights-grid">
             <div className="highlight-item">
+              <img src="/images/home/home_app1.png" alt="Architecture" className="card-img" />
               <span className="highlight-number">01</span>
               <h3>Architecture</h3>
               <p>
@@ -166,6 +178,7 @@ function Home() {
             </div>
 
             <div className="highlight-item">
+              <img src="/images/home/home_app2.png" alt="Automotive" className="card-img" />
               <span className="highlight-number">02</span>
               <h3>Automotive</h3>
               <p>
@@ -175,6 +188,7 @@ function Home() {
             </div>
 
             <div className="highlight-item">
+              <img src="/images/home/home_app3.png" alt="Commercial Spaces" className="card-img" />
               <span className="highlight-number">03</span>
               <h3>Commercial Spaces</h3>
               <p>
@@ -184,6 +198,7 @@ function Home() {
             </div>
 
             <div className="highlight-item">
+              <img src="/images/home/home_app4.png" alt="Energy Projects" className="card-img" />
               <span className="highlight-number">04</span>
               <h3>Energy Projects</h3>
               <p>
