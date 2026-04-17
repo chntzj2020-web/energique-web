@@ -12,9 +12,8 @@ function Footer() {
 
           <ul className="footer-links">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/applications">Applications</Link></li>
+            <li><Link to="/our-services">Our Services</Link></li>
             <li><Link to="/products">Products</Link></li>
-            <li><Link to="/news">News</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>

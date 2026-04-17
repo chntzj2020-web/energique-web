@@ -34,16 +34,12 @@ export default function Sidebar() {
           HOME
         </Link>
 
-        <Link to="/applications" className="menu-item" onClick={closeSidebar}>
-          APPLICATIONS
+        <Link to="/our-services" className="menu-item" onClick={closeSidebar}>
+          OUR SERVICES
         </Link>
 
         <Link to="/products" className="menu-item" onClick={closeSidebar}>
           PRODUCTS
-        </Link>
-
-        <Link to="/news" className="menu-item" onClick={closeSidebar}>
-          NEWS
         </Link>
 
         <Link to="/about" className="menu-item" onClick={closeSidebar}>
