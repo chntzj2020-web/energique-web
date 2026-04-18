@@ -32,12 +32,15 @@ function Home() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Explore Technologies
+                Start Exploring
               </button>
 
               <button
                 className="secondary-btn"
-                onClick={() => navigate("/contact")}
+                onClick={() => {
+                  navigate("/contact");
+                  window.scrollTo(0, 0);
+                }}
               >
                 Contact Us
               </button>

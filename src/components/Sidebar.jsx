@@ -34,9 +34,35 @@ export default function Sidebar() {
           HOME
         </Link>
 
-        <Link to="/our-services" className="menu-item" onClick={closeSidebar}>
-          OUR SERVICES
-        </Link>
+        <div className="menu-group">
+          <Link to="/our-services" className="menu-item" onClick={closeSidebar}>
+            OUR SERVICES
+          </Link>
+
+          <Link
+            to="/our-services#smart-film"
+            className="submenu-item"
+            onClick={closeSidebar}
+          >
+            Smart Film Solutions
+          </Link>
+
+          <Link
+            to="/our-services#solar-energy"
+            className="submenu-item"
+            onClick={closeSidebar}
+          >
+            Solar & Energy Solutions
+          </Link>
+
+          <Link
+            to="/our-services#advisory-partnerships"
+            className="submenu-item"
+            onClick={closeSidebar}
+          >
+            Advisory & Partnerships
+          </Link>
+        </div>
 
         <Link to="/products" className="menu-item" onClick={closeSidebar}>
           PRODUCTS

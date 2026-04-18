@@ -9,10 +9,12 @@ import Sidebar from "./components/Sidebar";
 import Enquiry from "./pages/Enquiry";
 import AdminEnquiries from "./pages/AdminEnquiries";
 import About from "./pages/About";
+import ScrollToHash from "./components/ScrollToHash";
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToHash />
       <Sidebar />
 
       <Routes>

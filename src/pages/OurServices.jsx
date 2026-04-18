@@ -1,50 +1,52 @@
 import "./OurServices.css";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
-function Application() {
+function OurServices() {
+  const navigate = useNavigate();
+
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="page-layout">
       <div className="main-content">
-        <div className="application-page">
+        <div className="our-services-page">
           {/* HERO */}
-          <section className="application-hero">
-            <div className="application-hero-overlay"></div>
+          <section className="services-hero">
+            <div className="services-hero-overlay"></div>
             <img
-              src="/images/application/application-hero.png"
-              alt="Smart glass applications"
-              className="application-hero-image"
+              src="/images/service/hero_banner.png"
+              alt="Our Services"
+              className="services-hero-image"
             />
 
-            <div className="application-hero-content">
-              <p className="application-kicker">Application Scenarios</p>
-              <h1 className="application-title">
-                Intelligent Glass Solutions for Modern Spaces
+            <div className="services-hero-content">
+              <p className="services-kicker">Our Services</p>
+              <h1 className="services-title">
+                Smart Material and Energy Solutions for Evolving Spaces
               </h1>
-              <p className="application-subtitle">
-                From premium automotive cabins to adaptive architectural and
-                commercial environments, Energique transforms glass into a more
-                private, comfortable, and responsive experience.
+              <p className="services-subtitle">
+                Energique brings together smart film technology, solar-oriented
+                innovation, and project advisory support to help clients build
+                more adaptive, efficient, and future-facing environments.
               </p>
 
-              <div className="application-hero-buttons">
+              <div className="services-hero-buttons">
                 <button
                   className="primary-btn"
-                  onClick={() =>
-                    document
-                      .getElementById("application-overview")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
+                  onClick={() => scrollToSection("services-overview")}
                 >
-                  Explore Applications
+                  Explore Services
                 </button>
 
                 <button
                   className="secondary-btn"
-                  onClick={() =>
-                    document
-                      .getElementById("application-cta")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
+                  onClick={() => {
+                    navigate("/contact");
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   Contact Us
                 </button>
@@ -53,275 +55,188 @@ function Application() {
           </section>
 
           {/* OVERVIEW */}
-          <section className="application-overview" id="application-overview">
+          <section className="services-overview" id="services-overview">
             <div className="section-heading center">
-              <p className="section-kicker">Where Energique Works</p>
+              <p className="section-kicker">What We Do</p>
               <h2 className="section-title">
-                Smart Material Solutions Across Diverse Environments
+                Three Complementary Capabilities, One Integrated Approach
               </h2>
               <p className="section-description">
-                Energique's intelligent dimming and encapsulation technologies
-                are designed for real-world applications where privacy, thermal
-                comfort, optical clarity, and premium design experience matter.
+                Our work spans intelligent glazing, energy-related material
+                applications, and strategic collaboration support — helping turn
+                emerging ideas into grounded, usable solutions.
               </p>
             </div>
 
-            <div className="scenario-grid">
-              <div className="scenario-card">
-                <h3>Automotive</h3>
+            <div className="service-overview-grid">
+              <div className="service-overview-card">
+                <div className="service-overview-number">01</div>
+                <h3>Smart Film Solutions</h3>
                 <p>
-                  Panoramic roofs, side windows, rear cabins, and executive
-                  partitions for a cooler, quieter, and more private ride.
+                  Adaptive film and dimming technologies designed for privacy,
+                  comfort, light control, and premium spatial experiences.
                 </p>
               </div>
 
-              <div className="scenario-card">
-                <h3>Architectural</h3>
+              <div className="service-overview-card">
+                <div className="service-overview-number">02</div>
+                <h3>Solar & Energy Solutions</h3>
                 <p>
-                  Office partitions, facades, skylights, and residential glass
-                  surfaces with adaptive privacy and light control.
+                  Forward-looking energy and photovoltaic directions that connect
+                  material innovation with sustainable applications.
                 </p>
               </div>
 
-              <div className="scenario-card">
-                <h3>Commercial</h3>
+              <div className="service-overview-card">
+                <div className="service-overview-number">03</div>
+                <h3>Advisory & Partnerships</h3>
                 <p>
-                  Hospitality, healthcare, retail, and premium business spaces
-                  that require comfort, flexibility, and refined presentation.
-                </p>
-              </div>
-
-              <div className="scenario-card">
-                <h3>Custom Smart Spaces</h3>
-                <p>
-                  Tailored interiors, luxury environments, and specialty
-                  projects enabled by zoned and multi-level dimming solutions.
+                  Research, project guidance, and collaborative support for
+                  clients exploring new technical and commercial possibilities.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* AUTOMOTIVE */}
-          <section className="application-block">
-            <div className="application-image-wrapper">
+          {/* SMART FILM */}
+          <section className="service-block" id="smart-film">
+            <div className="service-image-wrapper">
               <img
-                src="/images/application/automotive.png"
-                alt="Automotive smart glass solution"
-                className="application-image"
+                src="/images/service/smart_film.png"
+                alt="Smart film solutions"
+                className="service-image"
               />
             </div>
 
-            <div className="application-text">
-              <p className="application-label">Application 01</p>
-              <h2 className="application-name">Automotive Solutions</h2>
-              <p className="application-description">
-                Create a cooler, quieter, and more private driving experience
-                with intelligent dimming technologies for panoramic roofs, side
-                windows, executive partitions, and premium passenger cabins.
+            <div className="service-text">
+              <p className="service-label">Service 01</p>
+              <h2 className="service-name">Smart Film Solutions</h2>
+              <p className="service-description">
+                Energique provides advanced smart film solutions designed to
+                enhance privacy, visual comfort, and spatial flexibility across
+                commercial, residential, and specialised environments. Our smart
+                film systems are developed to support modern architectural needs
+                while maintaining a refined and seamless material appearance.
               </p>
-
-              <div className="application-feature-list">
-                <div className="application-feature-card">
-                  <h3>Panoramic Sunroofs</h3>
-                  <p>
-                    Adaptive dimming helps reduce glare, heat, and UV exposure
-                    while preserving an open cabin feeling.
-                  </p>
-                </div>
-
-                <div className="application-feature-card">
-                  <h3>Rear Passenger Privacy</h3>
-                  <p>
-                    Switchable transparency enables privacy on demand for a more
-                    refined passenger experience.
-                  </p>
-                </div>
-
-                <div className="application-feature-card">
-                  <h3>Thermal & Acoustic Comfort</h3>
-                  <p>
-                    Supports a more comfortable interior through solar control
-                    and enhanced sound insulation.
-                  </p>
-                </div>
-              </div>
-
-              <p className="powered-by">
-                Powered by PDCLC Intelligent Color Dimming Film, integrated with
-                PVE encapsulation technology.
+              <p className="service-description">
+                From meeting rooms, hospitality spaces, and retail interiors to
+                premium residential applications, our solutions help transform
+                static glass surfaces into responsive, multifunctional elements.
+                This enables clients to achieve better control over openness,
+                daylight, and user experience without compromising design
+                quality.
+              </p>
+              <p className="service-description">
+                Beyond product supply, we work closely with clients and partners
+                to understand project requirements, application contexts, and
+                performance priorities, helping deliver tailored smart film
+                outcomes that balance technology, aesthetics, and long-term
+                practicality.
               </p>
             </div>
           </section>
 
-          {/* ARCHITECTURAL */}
-          <section className="application-block reverse">
-            <div className="application-image-wrapper">
+          {/* SOLAR */}
+          <section className="service-block reverse" id="solar-energy">
+            <div className="service-image-wrapper">
               <img
-                src="/images/application/architectural.png"
-                alt="Architectural smart glass solution"
-                className="application-image"
+                src="/images/service/solar_energy.png"
+                alt="Solar and energy solutions"
+                className="service-image"
               />
             </div>
 
-            <div className="application-text">
-              <p className="application-label">Application 02</p>
-              <h2 className="application-name">Architectural Spaces</h2>
-              <p className="application-description">
-                Transform glass into an adaptive surface for light control,
-                privacy, and contemporary architectural expression across office,
-                residential, and hospitality settings.
+            <div className="service-text">
+              <p className="service-label">Service 02</p>
+              <h2 className="service-name">Solar & Energy Solutions</h2>
+              <p className="service-description">
+                Energique supports forward-looking solar and energy applications
+                that connect material innovation with the evolving demands of
+                clean energy infrastructure. We focus on practical solution
+                pathways that align emerging technologies with real-world
+                project needs, helping clients explore new possibilities in
+                energy efficiency, photovoltaic integration, and future-ready
+                system design.
               </p>
-
-              <div className="application-feature-list">
-                <div className="application-feature-card">
-                  <h3>Office Partitions</h3>
-                  <p>
-                    Instantly shift between openness and privacy in meeting
-                    rooms, executive offices, and collaborative spaces.
-                  </p>
-                </div>
-
-                <div className="application-feature-card">
-                  <h3>Residential Windows</h3>
-                  <p>
-                    Enhance comfort and daylight management while maintaining a
-                    clean and modern design language.
-                  </p>
-                </div>
-
-                <div className="application-feature-card">
-                  <h3>Facades & Skylights</h3>
-                  <p>
-                    Introduce dynamic control to architectural glass for both
-                    performance and visual sophistication.
-                  </p>
-                </div>
-              </div>
-
-              <p className="powered-by">
-                Powered by intelligent dimming film for privacy and comfort, with
-                integrated encapsulation for clarity and durability.
+              <p className="service-description">
+                Our work in this area reflects a broader commitment to
+                sustainable development and advanced industrial collaboration.
+                Whether the objective is to support energy-related materials,
+                investigate photovoltaic use cases, or contribute to cleaner and
+                more adaptive built environments, we aim to provide a grounded
+                and commercially aware perspective.
+              </p>
+              <p className="service-description">
+                By combining technical understanding with application-oriented
+                thinking, Energique helps bridge the gap between innovation and
+                implementation, enabling clients and partners to engage with
+                solar and energy opportunities in a more strategic, informed,
+                and future-conscious way.
               </p>
             </div>
           </section>
 
-          {/* COMMERCIAL */}
-          <section className="application-block">
-            <div className="application-image-wrapper">
+          {/* PARTNERSHIP */}
+          <section className="service-block" id="advisory-partnerships">
+            <div className="service-image-wrapper">
               <img
-                src="/images/application/commercial.png"
-                alt="Commercial smart glass solution"
-                className="application-image"
+                src="/images/service/partnership.png"
+                alt="Advisory and partnerships"
+                className="service-image"
               />
             </div>
 
-            <div className="application-text">
-              <p className="application-label">Application 03</p>
-              <h2 className="application-name">Commercial Environments</h2>
-              <p className="application-description">
-                Smart glass solutions for retail, healthcare, hospitality, and
-                high-traffic environments where privacy, comfort, and premium
-                presentation all play a role.
+            <div className="service-text">
+              <p className="service-label">Service 03</p>
+              <h2 className="service-name">Advisory & Partnerships</h2>
+              <p className="service-description">
+                Energique offers advisory and partnership support for clients,
+                collaborators, and organisations seeking to explore new material
+                technologies, project opportunities, or market-facing
+                applications. We recognise that successful innovation often
+                depends not only on the product itself, but also on the quality
+                of planning, communication, and cross-sector coordination behind
+                it.
               </p>
-
-              <div className="application-feature-list">
-                <div className="application-feature-card">
-                  <h3>Retail & Showrooms</h3>
-                  <p>
-                    Deliver a stronger brand experience through responsive glass
-                    surfaces and more dynamic visual presentation.
-                  </p>
-                </div>
-
-                <div className="application-feature-card">
-                  <h3>Healthcare Settings</h3>
-                  <p>
-                    Improve consultation and treatment spaces with flexible
-                    privacy control and a cleaner, more modern atmosphere.
-                  </p>
-                </div>
-
-                <div className="application-feature-card">
-                  <h3>Hotels & Lounges</h3>
-                  <p>
-                    Elevate guest experience with privacy, comfort, and
-                    high-end design integration.
-                  </p>
-                </div>
-              </div>
-
-              <p className="powered-by">
-                Designed for project-based environments where performance and
-                premium space experience must work together.
+              <p className="service-description">
+                Our role may include early-stage research discussions, project
+                direction, technical-commercial alignment, and collaborative
+                engagement across different stakeholders. This allows us to
+                support clearer decision-making and more confident progress,
+                particularly in projects where new technologies require careful
+                positioning and practical evaluation.
               </p>
-            </div>
-          </section>
-
-          {/* CUSTOM */}
-          <section className="custom-section">
-            <div className="section-heading center">
-              <p className="section-kicker">Custom Smart Environments</p>
-              <h2 className="section-title">
-                Tailored Solutions for Next-Generation Interiors
-              </h2>
-              <p className="section-description">
-                From zoned dimming and color-adaptive concepts to personalized
-                privacy experiences, Energique enables custom smart environments
-                for future-facing interior design.
+              <p className="service-description">
+                Through long-term partnerships and responsive project support,
+                we aim to create value beyond transaction alone — building
+                relationships that are informed, adaptable, and oriented toward
+                sustainable growth, credible execution, and shared success.
               </p>
-            </div>
-
-            <div className="custom-grid">
-              <div className="custom-card">
-                <h3>Luxury Cabins</h3>
-                <p>
-                  Premium mobility interiors with elevated privacy and visual
-                  sophistication.
-                </p>
-              </div>
-
-              <div className="custom-card">
-                <h3>VIP Rooms</h3>
-                <p>
-                  Adaptive glass solutions that create exclusivity and comfort
-                  in private environments.
-                </p>
-              </div>
-
-              <div className="custom-card">
-                <h3>Creative Installations</h3>
-                <p>
-                  Dynamic materials for interactive and design-led spatial
-                  experiences.
-                </p>
-              </div>
-
-              <div className="custom-card">
-                <h3>Specialty Projects</h3>
-                <p>
-                  Flexible smart glass systems tailored to unique operational
-                  and design requirements.
-                </p>
-              </div>
             </div>
           </section>
 
           {/* CTA */}
-          <section className="application-cta" id="application-cta">
-            <div className="application-cta-content">
-              <p className="section-kicker">Let’s Build the Right Scenario</p>
+          <section className="services-cta">
+            <div className="services-cta-content">
+              <p className="section-kicker">Let’s Build the Right Direction</p>
               <h2 className="section-title">
-                Explore the Best Application for Your Project
+                Explore How Energique Can Support Your Project
               </h2>
-              <p className="section-description">
-                Whether you are designing for transportation, architecture, or
-                commercial interiors, Energique helps bring intelligent material
-                solutions into practical and high-value spaces.
-              </p>
 
-              <div className="application-hero-buttons">
-                <button className="primary-btn">Talk to Our Team</button>
-                <button className="secondary-btn">Explore Products</button>
+              <div className="services-hero-buttons">
+                <button
+                  className="primary-btn"
+                  onClick={() => navigate("/contact")}
+                >
+                  Talk to Our Team
+                </button>
+
+                <button
+                  className="secondary-btn"
+                  onClick={() => navigate("/products")}
+                >
+                  Explore Products
+                </button>
               </div>
             </div>
           </section>
@@ -335,4 +250,4 @@ function Application() {
   );
 }
 
-export default Application;
+export default OurServices;
