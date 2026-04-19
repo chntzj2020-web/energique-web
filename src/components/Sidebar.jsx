@@ -4,6 +4,7 @@ import "./Sidebar.css";
 
 export default function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
@@ -11,6 +12,11 @@ export default function Sidebar() {
 
   const closeSidebar = () => {
     setIsSidebarOpen(false);
+    setIsServicesOpen(false);
+  };
+
+  const toggleServices = () => {
+    setIsServicesOpen((prev) => !prev);
   };
 
   return (
@@ -35,33 +41,42 @@ export default function Sidebar() {
         </Link>
 
         <div className="menu-group">
-          <Link to="/our-services" className="menu-item" onClick={closeSidebar}>
-            OUR SERVICES
-          </Link>
-
-          <Link
-            to="/our-services#smart-film"
-            className="submenu-item"
-            onClick={closeSidebar}
+          <button
+            className={`menu-item menu-item-button ${
+              isServicesOpen ? "expanded" : ""
+            }`}
+            onClick={toggleServices}
+            type="button"
           >
-            Smart Film Solutions
-          </Link>
+            <span>OUR SERVICES</span>
+            <span className={`arrow ${isServicesOpen ? "open" : ""}`}>▾</span>
+          </button>
 
-          <Link
-            to="/our-services#solar-energy"
-            className="submenu-item"
-            onClick={closeSidebar}
-          >
-            Solar & Energy Solutions
-          </Link>
+          <div className={`submenu ${isServicesOpen ? "open" : ""}`}>
+            <Link
+              to="/our-services#smart-film"
+              className="submenu-item"
+              onClick={closeSidebar}
+            >
+              Smart Film Solutions
+            </Link>
 
-          <Link
-            to="/our-services#advisory-partnerships"
-            className="submenu-item"
-            onClick={closeSidebar}
-          >
-            Advisory & Partnerships
-          </Link>
+            <Link
+              to="/our-services#solar-energy"
+              className="submenu-item"
+              onClick={closeSidebar}
+            >
+              Solar & Energy Solutions
+            </Link>
+
+            <Link
+              to="/our-services#advisory-partnerships"
+              className="submenu-item"
+              onClick={closeSidebar}
+            >
+              Advisory & Partnerships
+            </Link>
+          </div>
         </div>
 
         <Link to="/products" className="menu-item" onClick={closeSidebar}>

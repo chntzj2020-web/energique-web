@@ -2,6 +2,54 @@ import "./Products.css";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 
+const pvApplications = [
+  {
+    title: "Building-Integrated Photovoltaics",
+    description:
+      "Photovoltaic systems can be integrated into façades, skylights, roofs, and external envelopes, enabling buildings to generate clean energy while supporting sustainable architectural design.",
+    image: "/images/products/solar1.png",
+  },
+  {
+    title: "Automotive Solar Integration",
+    description:
+      "Photovoltaic materials can support energy generation in next-generation mobility solutions, contributing to auxiliary power supply, energy efficiency, and future-oriented vehicle design.",
+    image: "/images/products/solar2.png",
+  },
+  {
+    title: "Specialty & Industrial Applications",
+    description:
+      "From commercial infrastructure to emerging energy systems, photovoltaic technologies offer scalable possibilities for projects requiring lightweight, efficient, and adaptable solar solutions.",
+    image: "/images/products/solar3.png",
+  },
+];
+
+const smartGlassApplications = [
+  {
+    title: "Automotive Panoramic Roof",
+    image: "/images/products/film1.png",
+  },
+  {
+    title: "Side Windows",
+    image: "/images/products/film2.png",
+  },
+  {
+    title: "Rear Windshield Glass",
+    image: "/images/products/film3.png",
+  },
+  {
+    title: "Architecture",
+    image: "/images/products/film4.png",
+  },
+  {
+    title: "Home Interiors",
+    image: "/images/products/film5.png",
+  },
+  {
+    title: "3C Electronics",
+    image: "/images/products/film6.png",
+  },
+];
+
 function Products() {
   return (
     <div className="page-layout">
@@ -10,20 +58,25 @@ function Products() {
           {/* HERO */}
           <section className="products-hero">
             <div className="products-hero-overlay"></div>
+
             <img
-              src="/images/products/products-hero.png"
-              alt="Smart glass technology"
+              src="/images/products/hero_banner.png"
+              alt="Energique smart materials"
               className="products-hero-image"
             />
 
             <div className="products-hero-content">
               <p className="products-kicker">Product Solutions</p>
+
               <h1 className="products-title">
-                Intelligent Materials for Smart Privacy and Comfort
+                Advanced Materials for Intelligent Living
               </h1>
+
               <p className="products-subtitle">
-                Advanced dimming film and encapsulation solutions engineered for
-                automotive, architectural, and commercial environments.
+                Energique’s product portfolio is built around two core
+                directions: photovoltaic technologies for clean energy
+                applications, and smart glass material systems for dynamic
+                privacy, comfort, durability, and modern integrated design.
               </p>
 
               <div className="products-hero-buttons">
@@ -31,7 +84,7 @@ function Products() {
                   className="primary-btn"
                   onClick={() =>
                     document
-                      .getElementById("product-lineup")
+                      .getElementById("products-overview")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                 >
@@ -53,252 +106,137 @@ function Products() {
           </section>
 
           {/* INTRO */}
-          <section className="products-intro" id="product-lineup">
-            <div className="section-heading">
-              <p className="section-kicker">Our Lineup</p>
-              <h2 className="section-title">Two Core Technologies, One Complete Solution</h2>
-              <p className="section-description">
-                Energique’s product system is built around two complementary
-                technologies: PDCLC Intelligent Color Dimming Film for dynamic
-                privacy and comfort, and PVE Intelligent Glass Encapsulation Film
-                for clarity, durability, and enhanced integrated performance.
-              </p>
-            </div>
-          </section>
-
-          {/* PRODUCT 1 */}
-          <section className="product-block">
-            <div className="product-image-wrapper">
-              <img
-                src="/images/products/pdclc-film.png"
-                alt="PDCLC Intelligent Color Dimming Film"
-                className="product-image"
-              />
-            </div>
-
-            <div className="product-text">
-              <p className="product-label">Product 01</p>
-              <h2 className="product-name">PDCLC Intelligent Color Dimming Film</h2>
-              <p className="product-description">
-                A fast-switching smart film solution that combines privacy,
-                thermal comfort, UV protection, and optical clarity in one
-                seamless surface.
-              </p>
-
-              <div className="feature-grid">
-                <div className="feature-card">
-                  <h3>Instant Privacy</h3>
-                  <p>Rapid switching performance for on-demand privacy control.</p>
-                </div>
-
-                <div className="feature-card">
-                  <h3>UV Protection</h3>
-                  <p>Helps block harmful UV exposure for a safer interior experience.</p>
-                </div>
-
-                <div className="feature-card">
-                  <h3>Thermal Comfort</h3>
-                  <p>Supports heat insulation and a cooler cabin or indoor environment.</p>
-                </div>
-
-                <div className="feature-card">
-                  <h3>Custom Dimming</h3>
-                  <p>Multi-level dimming and zoned configurations for flexible use.</p>
-                </div>
-
-                <div className="feature-card">
-                  <h3>Clear Visibility</h3>
-                  <p>Balances privacy with transparency and modern visual appeal.</p>
-                </div>
-
-                <div className="feature-card">
-                  <h3>Acoustic Support</h3>
-                  <p>Improves comfort with enhanced sound insulation performance.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* PRODUCT 2 */}
-          <section className="product-block reverse">
-            <div className="product-image-wrapper">
-              <img
-                src="/images/products/pve-film.png"
-                alt="PVE Intelligent Glass Encapsulation Film"
-                className="product-image"
-              />
-            </div>
-
-            <div className="product-text">
-              <p className="product-label">Product 02</p>
-              <h2 className="product-name">PVE Intelligent Glass Encapsulation Film</h2>
-              <p className="product-description">
-                A high-clarity encapsulation layer designed to improve
-                transparency, anti-yellowing performance, durability, and
-                overall integrated thermal and acoustic results.
-              </p>
-
-              <div className="feature-grid">
-                <div className="feature-card">
-                  <h3>High Transparency</h3>
-                  <p>Designed for excellent light transmission and visual purity.</p>
-                </div>
-
-                <div className="feature-card">
-                  <h3>Low Haze</h3>
-                  <p>Maintains a cleaner and more refined optical appearance.</p>
-                </div>
-
-                <div className="feature-card">
-                  <h3>Anti-yellowing</h3>
-                  <p>Improves long-term visual stability under UV exposure.</p>
-                </div>
-
-                <div className="feature-card">
-                  <h3>Acoustic & Thermal Support</h3>
-                  <p>Contributes to comfort through heat and sound insulation.</p>
-                </div>
-
-                <div className="feature-card">
-                  <h3>No Plasticizers</h3>
-                  <p>Built with a cleaner material approach for advanced applications.</p>
-                </div>
-
-                <div className="feature-card">
-                  <h3>Environmentally Friendly</h3>
-                  <p>Supports premium performance with a more sustainable profile.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* INTEGRATED SYSTEM */}
-          <section className="integrated-section">
+          <section className="products-intro" id="products-overview">
             <div className="section-heading center">
-              <p className="section-kicker">Integrated Performance</p>
-              <h2 className="section-title">Better Together</h2>
+              <p className="section-kicker">Our Product Portfolio</p>
+
+              <h2 className="section-title">
+                Two Core Product Lines, Multiple Future-Facing Applications
+              </h2>
+
               <p className="section-description">
-                By combining active dimming technology with advanced glass
-                encapsulation materials, Energique delivers a more complete
-                solution for privacy, comfort, clarity, and intelligent space design.
+                Energique focuses on advanced material technologies that support
+                both sustainable energy systems and intelligent space
+                management. Our current product offerings are centered on
+                photovoltaic solutions and smart glass material systems,
+                designed for automotive, architectural, residential, and
+                commercial applications.
+              </p>
+            </div>
+          </section>
+
+          {/* PHOTOVOLTAIC */}
+          <section className="product-section">
+            <div className="section-heading">
+              <p className="section-kicker">Product Line 01</p>
+
+              <h2 className="section-title">Photovoltaic Solutions</h2>
+
+              <p className="section-description">
+                Photovoltaic technology plays a central role in the global shift
+                toward cleaner and more efficient energy systems. By converting
+                solar energy into usable electricity, photovoltaic materials
+                make it possible to integrate power generation into buildings,
+                mobility, and specialized infrastructure.
               </p>
             </div>
 
-            <div className="integrated-cards">
-              <div className="integrated-card">
+            <div className="pv-grid">
+              {pvApplications.map((item) => (
+                <div className="pv-card" key={item.title}>
+                  <div className="pv-card-image-wrapper">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="pv-card-image"
+                    />
+                  </div>
+
+                  <div className="pv-card-content">
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* SMART GLASS */}
+          <section className="product-section smart-film-section">
+            <div className="section-heading">
+              <p className="section-kicker">Product Line 02</p>
+
+              <h2 className="section-title">Smart Glass Material System</h2>
+
+              <p className="section-description">
+                Energique provides an integrated smart glass material solution
+                combining switching film technology and advanced encapsulation
+                materials for privacy, solar control, optical comfort, long-term
+                durability, and next-generation glazing systems.
+              </p>
+            </div>
+
+            <div className="film-tech-grid three-column">
+              <div className="film-tech-card">
+                <p className="film-tech-label">Standard Solution</p>
+                <h3>PDLC Film</h3>
+                <p>
+                  PDLC smart film is widely used for switchable privacy and
+                  simple light control in residential and commercial spaces.
+                </p>
+              </div>
+
+              <div className="film-tech-card featured">
+                <p className="film-tech-label">Energique Core Technology</p>
                 <h3>PDCLC Film</h3>
                 <p>
-                  Dynamic switching, customizable dimming, privacy on demand,
-                  and enhanced user experience.
+                  PDCLC technology offers stronger optical performance, better
+                  efficiency, longer durability, and greater flexibility for
+                  premium projects and next-generation glazing systems.
                 </p>
               </div>
 
-              <div className="integrated-plus">+</div>
-
-              <div className="integrated-card">
-                <h3>PVE Film</h3>
+              <div className="film-tech-card">
+                <p className="film-tech-label">Supporting Material</p>
+                <h3>PVE Intelligent Glass Encapsulation Film</h3>
                 <p>
-                  Higher transparency, lower haze, anti-yellowing durability,
-                  and stronger integrated comfort performance.
-                </p>
-              </div>
-
-              <div className="integrated-equals">=</div>
-
-              <div className="integrated-card highlight">
-                <h3>Complete Smart Glass System</h3>
-                <p>
-                  A unified material solution for automotive, architectural,
-                  and commercial applications.
+                  Designed for laminated smart glass systems with high clarity,
+                  strong adhesion, anti-yellowing stability, and reliable
+                  long-term performance.
                 </p>
               </div>
             </div>
-          </section>
 
-          {/* HIGHLIGHTS */}
-          <section className="highlights-section">
-            <div className="section-heading center">
-              <p className="section-kicker">Technology Highlights</p>
-              <h2 className="section-title">Performance That Stands Out</h2>
-            </div>
+            {/* APPLICATIONS */}
+            <div className="applications-section">
+              <div className="section-heading center">
+                <p className="section-kicker">Application Scenarios</p>
 
-            <div className="highlight-grid">
-              <div className="highlight-card">
-                <h3>5ms</h3>
-                <p>Fast switching response for dynamic privacy control.</p>
+                <h2 className="section-title">
+                  Where Smart Glass Materials Create Value
+                </h2>
+
+                <p className="section-description">
+                  Applied across vehicles, architecture, interiors and
+                  electronics.
+                </p>
               </div>
 
-              <div className="highlight-card">
-                <h3>99.99%</h3>
-                <p>UV blocking capability for improved interior protection.</p>
+              <div className="application-grid">
+                {smartGlassApplications.map((item) => (
+                  <div className="application-card" key={item.title}>
+                    <div className="application-image-wrapper">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="application-image"
+                      />
+                    </div>
+
+                    <h3>{item.title}</h3>
+                  </div>
+                ))}
               </div>
-
-              <div className="highlight-card">
-                <h3>7-10°C</h3>
-                <p>Potential cooling effect compared with ordinary sunroof glass.</p>
-              </div>
-
-              <div className="highlight-card">
-                <h3>Multi-Zone</h3>
-                <p>Customizable dimming configurations for tailored spaces.</p>
-              </div>
-            </div>
-          </section>
-
-          {/* COMPARISON */}
-          <section className="comparison-section">
-            <div className="section-heading center">
-              <p className="section-kicker">Comparison</p>
-              <h2 className="section-title">How the Products Work Across Performance Needs</h2>
-            </div>
-
-            <div className="comparison-table-wrapper">
-              <table className="comparison-table">
-                <thead>
-                  <tr>
-                    <th>Feature</th>
-                    <th>PDCLC Film</th>
-                    <th>PVE Film</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Privacy Switching</td>
-                    <td>✓</td>
-                    <td>—</td>
-                  </tr>
-                  <tr>
-                    <td>UV Protection</td>
-                    <td>✓</td>
-                    <td>✓</td>
-                  </tr>
-                  <tr>
-                    <td>Optical Clarity</td>
-                    <td>✓</td>
-                    <td>✓</td>
-                  </tr>
-                  <tr>
-                    <td>Thermal Comfort</td>
-                    <td>✓</td>
-                    <td>✓</td>
-                  </tr>
-                  <tr>
-                    <td>Acoustic Support</td>
-                    <td>✓</td>
-                    <td>✓</td>
-                  </tr>
-                  <tr>
-                    <td>Anti-yellowing</td>
-                    <td>—</td>
-                    <td>✓</td>
-                  </tr>
-                  <tr>
-                    <td>Structural Integration</td>
-                    <td>—</td>
-                    <td>✓</td>
-                  </tr>
-                </tbody>
-              </table>
             </div>
           </section>
 
@@ -306,16 +244,26 @@ function Products() {
           <section className="products-cta" id="products-cta">
             <div className="products-cta-content">
               <p className="section-kicker">Next Step</p>
-              <h2 className="section-title">Find the Right Product for Your Project</h2>
+
+              <h2 className="section-title">
+                Find the Right Material Solution for Your Project
+              </h2>
+
               <p className="section-description">
-                Whether you are designing for premium mobility, modern
-                architecture, or commercial interiors, Energique offers smart
-                material solutions tailored to your application needs.
+                Whether you are developing clean energy applications or
+                intelligent glazing systems, Energique offers advanced material
+                solutions tailored to modern industry needs.
               </p>
 
-              <div className="products-hero-buttons">
+              <div className="products-hero-buttons cta-buttons">
                 <button className="primary-btn">Talk to Our Team</button>
-                <button className="secondary-btn">Explore Applications</button>
+
+                <button
+                  className="secondary-btn"
+                  onClick={() => (window.location.href = "/about")}
+                >
+                  Know More About Us
+                </button>
               </div>
             </div>
           </section>
@@ -332,3 +280,4 @@ function Products() {
 }
 
 export default Products;
+

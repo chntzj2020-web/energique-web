@@ -26,9 +26,9 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(24, 43, 51, 0.65) 0%,
-    rgba(24, 43, 51, 0.35) 45%,
-    rgba(24, 43, 51, 0.15) 100%
+    rgba(24, 43, 51, 0.68) 0%,
+    rgba(24, 43, 51, 0.4) 45%,
+    rgba(24, 43, 51, 0.18) 100%
   );
 }
 
@@ -38,42 +38,53 @@
   top: 50%;
   transform: translateY(-50%);
   left: 72px;
-  max-width: 720px;
+  max-width: 760px;
   color: white;
 }
 
 .products-kicker {
-  font-size: 14px;
-  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
   margin-bottom: 18px;
   color: #e0ecef;
+  text-transform: uppercase;
 }
 
 .products-title {
   font-family: "Montserrat", sans-serif;
   font-size: 64px;
-  font-weight: 300;
-  line-height: 1.1;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: white;
 }
 
 .products-subtitle {
   margin-top: 28px;
   font-size: 18px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.9);
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 700px;
 }
 
 .products-hero-buttons {
   display: flex;
   gap: 18px;
   margin-top: 36px;
+  flex-wrap: wrap;
 }
 
 
-/* SECTION HEADINGS */
+/* INTRO / SECTION HEADINGS */
+
+.products-intro {
+  padding-top: 20px;
+}
 
 .section-heading {
-  max-width: 780px;
+  max-width: 880px;
   margin: 0 auto;
   padding: 100px 20px 40px;
   text-align: left;
@@ -83,185 +94,160 @@
   text-align: center;
 }
 
+.section-heading.compact {
+  padding-top: 0;
+}
+
 .section-kicker {
-  font-size: 14px;
-  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
   color: #4f6872;
   margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
 .section-title {
   font-family: "Montserrat", sans-serif;
   font-size: 42px;
-  font-weight: 300;
+  font-weight: 600;
   color: #182b33;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 .section-description {
   margin-top: 24px;
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.85;
+  color: #2f3f45;
+}
+
+
+/* GENERAL PRODUCT SECTIONS */
+
+.product-section {
+  padding: 0 72px 40px;
+}
+
+.smart-film-section {
+  padding-top: 20px;
+}
+
+
+/* PHOTOVOLTAIC GRID */
+
+.pv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  padding-bottom: 40px;
+}
+
+.pv-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pv-card-image-wrapper {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.pv-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pv-card-content {
+  padding: 28px;
+}
+
+.pv-card-content h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #182b33;
+  margin-bottom: 14px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.pv-card-content p {
+  font-size: 15.5px;
+  font-weight: 400;
   line-height: 1.8;
   color: #2f3f45;
 }
 
 
-/* PRODUCT BLOCK */
+/* FILM TECH */
 
-.product-block {
+.film-tech-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-  padding: 100px 72px;
+  gap: 28px;
+  padding: 10px 0 30px;
 }
 
-.product-block.reverse {
-  grid-template-columns: 1fr 1fr;
-}
-
-.product-image-wrapper {
-  width: 100%;
-}
-
-.product-image {
-  width: 100%;
+.film-tech-card {
+  background: white;
+  padding: 34px;
   border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.product-label {
-  font-size: 13px;
-  letter-spacing: 3px;
-  color: #29383d;
-  margin-bottom: 12px;
-}
-
-.product-name {
-  font-family: "Montserrat", sans-serif;
-  font-size: 40px;
-  font-weight: 300;
-  margin-bottom: 20px;
-  color: #182b33;
-}
-
-.product-description {
-  font-size: 17px;
-  line-height: 1.8;
-  margin-bottom: 32px;
-  color: #0b3b50;
-}
-
-
-/* FEATURE GRID */
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 22px;
-}
-
-.feature-card {
-  background: white;
-  padding: 22px;
-  border-radius: 6px;
-  border: 1px solid rgba(0,0,0,0.05);
-}
-
-.feature-card h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  color: #182b33;
-}
-
-.feature-card p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #24363d;
-}
-
-
-/* INTEGRATED SECTION */
-
-.integrated-section {
-  background: #e9efef;
-  padding: 100px 72px;
-}
-
-.integrated-cards {
-  margin-top: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  color: #4f6872
-}
-
-.integrated-card {
-  background: white;
-  padding: 30px;
-  max-width: 260px;
-  border-radius: 6px;
-  text-align: center;
-}
-
-.integrated-card.highlight {
+.film-tech-card.featured {
   background: #2e5160;
+}
+
+.film-tech-card.featured h3,
+.film-tech-card.featured p,
+.film-tech-card.featured .film-tech-label {
   color: white;
 }
 
-.integrated-card.highlight h3,
-.integrated-card.highlight p {
-  color: white;
-}
-
-.integrated-plus,
-.integrated-equals {
-  font-size: 40px;
+.film-tech-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
   color: #4f6872;
+  margin-bottom: 12px;
+  text-transform: uppercase;
 }
 
-
-/* HIGHLIGHTS */
-
-.highlights-section {
-  padding: 100px 72px;
+.film-tech-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #182b33;
+  margin-bottom: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
-.highlight-grid {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 30px;
-}
-
-.highlight-card {
-  background: white;
-  padding: 40px;
-  text-align: center;
-  border-radius: 6px;
-}
-
-.highlight-card h3 {
-  font-size: 44px;
-  font-weight: 300;
-  margin-bottom: 10px;
-  color: #2e5160;
-}
-
-.highlight-card p {
-  font-size: 16px;
-  color: #3e525a;
+.film-tech-card p {
+  font-size: 15.5px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #2f3f45;
 }
 
 
 /* COMPARISON */
 
 .comparison-section {
-  background: #eef3f3;
-  padding: 100px 72px;
+  padding-top: 20px;
 }
 
 .comparison-table-wrapper {
-  margin-top: 60px;
+  margin-top: 36px;
   overflow-x: auto;
 }
 
@@ -269,6 +255,22 @@
   width: 100%;
   border-collapse: collapse;
   background: rgb(245, 248, 248);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 18px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.comparison-table th {
+  background: #2e5160;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .comparison-table td {
@@ -282,21 +284,55 @@
   color: #2e5160;
 }
 
-.comparison-table th,
-.comparison-table td {
-  padding: 18px;
-  text-align: center;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.comparison-table th {
-  background: #2e5160;
-  color: white;
-}
-
 .comparison-table td:first-child {
   text-align: left;
   color: #2f3f45;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+/* APPLICATIONS */
+
+.applications-section {
+  padding: 40px 72px 80px;
+}
+
+.application-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px 34px;
+  margin-top: 20px;
+}
+
+.application-card {
+  text-align: center;
+}
+
+.application-image-wrapper {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  background: #dfe7ea;
+}
+
+.application-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.application-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2d33;
+  text-shadow: none;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-top: 6px;
 }
 
 
@@ -305,34 +341,99 @@
 .products-cta {
   padding: 120px 72px;
   text-align: center;
+  background: #eef3f3;
 }
 
 .products-cta-content {
-  max-width: 720px;
+  max-width: 760px;
   margin: auto;
+}
+
+.cta-buttons {
+  justify-content: center;
 }
 
 
 /* MOBILE */
 
-@media (max-width: 900px) {
-
-  .product-block {
+@media (max-width: 1100px) {
+  .pv-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 80px 28px;
+  }
+
+  .film-tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .application-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .products-hero {
+    height: 82vh;
   }
 
   .products-hero-content {
     left: 28px;
+    right: 28px;
+    max-width: none;
   }
 
-  .highlight-grid {
-    grid-template-columns: repeat(2,1fr);
+  .products-title {
+    font-size: 46px;
   }
 
-  .integrated-cards {
-    flex-direction: column;
+  .products-subtitle {
+    font-size: 16px;
   }
 
+  .product-section,
+  .applications-section,
+  .products-cta {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .section-heading {
+    padding-top: 80px;
+  }
+
+  .section-title {
+    font-size: 34px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+
+  .application-image-wrapper {
+    height: 240px;
+  }
+}
+
+@media (max-width: 640px) {
+  .application-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products-title {
+    font-size: 36px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .pv-card-content h3,
+  .film-tech-card h3,
+  .application-card h3 {
+    font-size: 22px;
+  }
+
+  .pv-card-content,
+  .film-tech-card {
+    padding: 24px;
+  }
 }

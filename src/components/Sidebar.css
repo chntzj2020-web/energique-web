@@ -42,6 +42,29 @@
   background: #274f5d;
 }
 
+.menu-item-button {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: inherit;
+}
+
+.menu-item-button.expanded {
+  background: #274f5d;
+}
+
+.submenu {
+  background: #2d5f70;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.submenu.open {
+  max-height: 260px;
+}
+
 .submenu-item {
   display: block;
   padding: 16px 26px 16px 52px;
@@ -61,20 +84,14 @@
   padding-left: 58px;
 }
 
-.submenu {
-  background: #2d5f70;
-}
-
-.submenu div {
-  padding: 18px 36px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 15px;
-  letter-spacing: 1px;
-}
-
 .arrow {
   font-size: 14px;
   opacity: 0.9;
+  transition: transform 0.25s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
 }
 
 .menu-toggle {
