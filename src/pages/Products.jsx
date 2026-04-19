@@ -171,8 +171,8 @@ function Products() {
               <p className="section-description">
                 Energique provides an integrated smart glass material solution
                 combining switching film technology and advanced encapsulation
-                materials for privacy, solar control, optical comfort, long-term
-                durability, and next-generation glazing systems.
+                materials for privacy, solar control, optical comfort, durability,
+                and next-generation glazing systems.
               </p>
             </div>
 
@@ -181,18 +181,20 @@ function Products() {
                 <p className="film-tech-label">Standard Solution</p>
                 <h3>PDLC Film</h3>
                 <p>
-                  PDLC smart film is widely used for switchable privacy and
-                  simple light control in residential and commercial spaces.
+                  A widely used switchable privacy film for architectural and
+                  interior glazing applications, suitable for basic on/off privacy
+                  control and everyday smart glass integration.
                 </p>
               </div>
 
               <div className="film-tech-card featured">
                 <p className="film-tech-label">Energique Core Technology</p>
-                <h3>PDCLC Film</h3>
+                <h3>PDCLC Intelligent Color Dimming Film</h3>
                 <p>
-                  PDCLC technology offers stronger optical performance, better
-                  efficiency, longer durability, and greater flexibility for
-                  premium projects and next-generation glazing systems.
+                  Energique’s advanced dimming film platform offering faster
+                  switching, stronger UV protection, improved thermal comfort,
+                  acoustic enhancement, and multi-level dimming performance for
+                  premium automotive and architectural applications.
                 </p>
               </div>
 
@@ -200,14 +202,108 @@ function Products() {
                 <p className="film-tech-label">Supporting Material</p>
                 <h3>PVE Intelligent Glass Encapsulation Film</h3>
                 <p>
-                  Designed for laminated smart glass systems with high clarity,
-                  strong adhesion, anti-yellowing stability, and reliable
-                  long-term performance.
+                  A high-clarity encapsulation interlayer developed for laminated
+                  smart glass systems, offering strong adhesion, low haze, UV
+                  resistance, anti-yellowing stability, and enhanced long-term
+                  reliability.
                 </p>
               </div>
             </div>
 
-            {/* APPLICATIONS */}
+            <div className="comparison-section">
+              <div className="section-heading center">
+                <p className="section-kicker">Technical Comparison</p>
+                <h2 className="section-title">
+                  Performance Comparison of Smart Glass Materials
+                </h2>
+                <p className="section-description">
+                  Key performance indicators based on current product materials and
+                  reference data from the Energique product presentation.
+                </p>
+              </div>
+
+              <div className="comparison-table-wrapper">
+                <table className="comparison-table">
+                  <thead>
+                    <tr>
+                      <th>Criteria</th>
+                      <th>PDLC Film</th>
+                      <th>PDCLC Film</th>
+                      <th>PVE Encapsulation Film</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Primary Function</td>
+                      <td>Switchable privacy</td>
+                      <td>Color dimming + privacy + thermal control</td>
+                      <td>Encapsulation / lamination support</td>
+                    </tr>
+                    <tr>
+                      <td>Visible Light Transmission</td>
+                      <td>Standard smart-glass level</td>
+                      <td>High transparency viewing experience</td>
+                      <td>≥ 86%</td>
+                    </tr>
+                    <tr>
+                      <td>Haze</td>
+                      <td>Standard</td>
+                      <td>Optimized optical clarity</td>
+                      <td>≤ 0.7%</td>
+                    </tr>
+                    <tr>
+                      <td>Switching Speed</td>
+                      <td>Standard on/off switching</td>
+                      <td>As fast as 5 ms</td>
+                      <td>Not applicable</td>
+                    </tr>
+                    <tr>
+                      <td>UV Protection</td>
+                      <td>Basic UV shielding</td>
+                      <td>Up to 99.99% UV blocking</td>
+                      <td>UV-yellowing resistant</td>
+                    </tr>
+                    <tr>
+                      <td>Thermal Control</td>
+                      <td>Basic solar shading support</td>
+                      <td>Cooling effect up to 7–10°C under sunlight exposure</td>
+                      <td>Supports heat insulation in laminated systems</td>
+                    </tr>
+                    <tr>
+                      <td>Sound Insulation</td>
+                      <td>Standard</td>
+                      <td>Enhanced acoustic insulation</td>
+                      <td>Improves acoustic performance when combined with PDCLC</td>
+                    </tr>
+                    <tr>
+                      <td>Dimming Capability</td>
+                      <td>On / Off privacy mode</td>
+                      <td>Multi-level dimming + zoned customization</td>
+                      <td>Not applicable</td>
+                    </tr>
+                    <tr>
+                      <td>Durability</td>
+                      <td>Conventional</td>
+                      <td>Advanced performance for premium projects</td>
+                      <td>Strong adhesion, anti-yellowing, no plasticizers</td>
+                    </tr>
+                    <tr>
+                      <td>Typical Applications</td>
+                      <td>Residential / office partitions</td>
+                      <td>Automotive glazing, premium architecture, smart spaces</td>
+                      <td>Laminated smart glass systems</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p className="comparison-note">
+                * Data shown above is based on the Energique product presentation and
+                reference test statements. Performance may vary depending on glazing
+                structure, application scenario, and system configuration.
+              </p>
+            </div>
+
             <div className="applications-section">
               <div className="section-heading center">
                 <p className="section-kicker">Application Scenarios</p>
@@ -217,8 +313,7 @@ function Products() {
                 </h2>
 
                 <p className="section-description">
-                  Applied across vehicles, architecture, interiors and
-                  electronics.
+                  Applied across vehicles, architecture, interiors and electronics.
                 </p>
               </div>
 
