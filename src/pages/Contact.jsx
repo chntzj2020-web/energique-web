@@ -34,22 +34,16 @@ function Contact() {
                 </div>
 
                 <div className="contact-grid">
-                  <div className="contact-card">
-                    <h3>Head Office</h3>
+                   <div className="contact-card">
+                    <h3>Queensland</h3>
                     <p>📞 +61 400 000 000</p>
-                    <p>xxx@energique.com.au</p>
+                    <p>202 89 SURF PDE BROADBEACH, QLD 4218</p>
                   </div>
 
                   <div className="contact-card">
                     <h3>Sydney</h3>
                     <p>📞 +61 468 366 947</p>
-                    <p>nsw@energique.com.au</p>
-                  </div>
-
-                  <div className="contact-card">
-                    <h3>Queensland</h3>
-                    <p>📞 +61 400 000 000</p>
-                    <p>qld@energique.com.au</p>
+                    <p>energique.pty.ltd@gmail.com</p>
                   </div>
                 </div>
               </div>

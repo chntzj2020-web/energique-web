@@ -25,8 +25,8 @@ function Footer() {
 
           <ul className="footer-contact">
             <li>QLD, Australia</li>
-            <li>+61 400 000 000</li>
-            <li>xxx@energique.com</li>
+            <li>+61 468 366 947</li>
+            <li>www.energique.au</li>
           </ul>
         </div>
 
