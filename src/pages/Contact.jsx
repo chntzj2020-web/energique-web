@@ -36,7 +36,7 @@ function Contact() {
                 <div className="contact-grid">
                    <div className="contact-card">
                     <h3>Queensland</h3>
-                    <p>📞 +61 400 000 000</p>
+                    <p>📞 +61 468 366 947</p>
                     <p>202 89 SURF PDE BROADBEACH, QLD 4218</p>
                   </div>
 
